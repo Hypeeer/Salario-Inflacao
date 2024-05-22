@@ -1,5 +1,27 @@
 import options from 'readline-sync';
 
+
+const dataFormat = {
+    hour: 'numeric',
+    minute: 'numeric',
+}
+
+const dataAtual = new Date();
+const hora = dataAtual.getHours();
+
+let msg = "";
+
+if (hora == 5 || hora < 12) {
+    msg += "Bom Dia!!"
+} else if (hora > 12 && hora < 18) {
+    msg += "Boa Tarde!!"
+}else{
+    msg += "Boa Noite!!"
+}
+
+const menuFormat = "";
+
+
 //coleção que junta salaro/ano com inflação referente a cada ano
 let array_salarioMinimo = [
     { salario: 510.00, ano: 2010, infla: 5.92 },
@@ -14,11 +36,13 @@ let array_salarioMinimo = [
     { salario: 998.00, ano: 2019, infla: 4.31 },
     { salario: 1045.00, ano: 2020, infla: 4.52 }
 ];
-
+//Menu que recebe interação do usuario
+console.log(`${menuFormat.padStart(40,"*")}`);
+console.log(`Bem Vindo, São ${dataAtual.toLocaleTimeString('pt-br',dataFormat)} ${msg}\n`);
 console.log("1 - Lista historico salario mínimo ");
 console.log("2 - Lista historico taxa IPCA ");
 console.log("3 - Lista de porcentagem de crecimento salario\n");
-
+console.log(`${menuFormat.padStart(40,"*")}`);
 let option = options.question("Digite sua opcao: ");
 
 switch (option) {
