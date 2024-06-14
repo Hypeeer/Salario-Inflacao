@@ -27,7 +27,7 @@ const menu_principal = () => {
     console.log(`3 - lista de porcentagem de crecimento salario`);
     console.log(`${formatacao.padStart(50, "*")}`);
 
-}
+};
 
 // função para percorrer a coleção de objetos na propriedade salario e ano
 const lista_historico_salario_minimo = (arr) => {
@@ -37,8 +37,8 @@ const lista_historico_salario_minimo = (arr) => {
         console.log(`${"Ano: ".padEnd(30, ".")} ${lista.ano}`);
         console.log(`${"Salarios:".padEnd(30, ".")} ${lista.salario.toFixed(2).replace(".", ",")}\n`);
 
-    }
-}
+    };
+};
 
 // funçao para percorre a coleção de objetos na propriedade inflação e ano
 const lista_historico_PCA = (arr) => {
@@ -47,8 +47,8 @@ const lista_historico_PCA = (arr) => {
 
         console.log(`${"Ano: ".padEnd(30, ".")} ${lista.ano}`);
         console.log(`${"Inflação PCA: ".padEnd(30, ".")} ${lista.infla.toFixed(2).replace(".", ",")}%\n`);
-    }
-}
+    };
+};
 
 // função para processamento dos dados indicando a diferença de salario a cada ano
 const porcentagem_crecimento_salarial = (arr) => {
@@ -67,8 +67,8 @@ const porcentagem_crecimento_salarial = (arr) => {
         console.log(`${"Salario Mínimo".padEnd(30, ".")} R$ ${arr[i].salario.toFixed(2).replace(".", ",")}`);
         console.log(`${"Crecimento Salarial: ".padEnd(30, ".")} ${crecimentoSalarial.toFixed(2).replace(".", ",")}%`);
         console.log(`${"Inflação IPCA: ".padEnd(30, ".")} ${arr[i].infla.toFixed(2).replace(".", ",")}%\n`);
-    }
-}
+    };
+};
 
 // função para escolha do usuario no menu 
 const escolha_opcao = () => {
@@ -91,6 +91,6 @@ const escolha_opcao = () => {
         default:
             console.log("Opcao invalida");
     };
-}
+};
 
-escolha_opcao()
+escolha_opcao();
