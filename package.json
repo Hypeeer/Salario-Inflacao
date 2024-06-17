@@ -1,16 +1,16 @@
 {
-  "name": "projetogit",
-  "version": "1.0.0",
-  "description": "Olá, esse arquivo é um projeto para minha aprendizagem, a cada nova descoberta eu estarei implementado nesse projeto :)",
-  "type": "module",
-  "main": "Calculadora.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "readline-sync": "^1.4.10"
-  }
+    "name": "projetogit",
+    "version": "1.0.0",
+    "description": "Olá, esse arquivo é um projeto para minha aprendizagem, a cada nova descoberta eu estarei implementado nesse projeto :)",
+    "type": "module",
+    "main": "Calculadora.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "readline-sync": "^1.4.10"
+    }
 }
