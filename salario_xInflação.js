@@ -15,15 +15,38 @@ let array_salarioMinimo = [
     { salario: 1045.0, ano: 2020, infla: 4.52 },
 ];
 
+const data_hora = () => {
+    const data_hoje = new Date();
+    const horas = data_hoje.getHours();
+
+    const format = {
+        hour: '2-digit',
+        minute: '2-digit',
+    };
+
+    let msg = '';
+
+    if (horas >= 6 && horas < 12) {
+        console.log(', Bom dia!\n');
+    } else if (horas >= 12 && horas < 18) {
+        msg = ', Boa tarde!';
+    } else {
+        console.log(', Boa noite!');
+    }
+
+    return 'São ' + data_hoje.toLocaleString('pt-br', format) + msg;
+};
+
 // função do menu principal
 const menu_principal = () => {
     let formatacao = '';
 
     console.log(`${formatacao.padStart(50, '*')}`);
-    console.log(`Bem - Vindo (a)`);
+    console.log(`Bem - Vindo (a) ${data_hora()}`);
     console.log(`1 - Lista historico salario mínimo`);
     console.log(`2 - Lista historico taxa IPCA`);
     console.log(`3 - lista de porcentagem de crecimento salario`);
+    console.log(`4 - Sair`);
     console.log(`${formatacao.padStart(50, '*')}`);
 };
 
@@ -66,7 +89,8 @@ const porcentagem_crecimento_salarial = (arr) => {
 const escolha_opcao = () => {
     let options;
     menu_principal();
-    options = option.question(`Escolha uma Opcao: `);
+    options = option.question(`\nEscolha uma Opcao: `);
+    console.log(`${'-'.padEnd(40, '-')}`);
     options = parseInt(options);
 
     switch (options) {
@@ -78,6 +102,9 @@ const escolha_opcao = () => {
             break;
         case 3:
             porcentagem_crecimento_salarial(array_salarioMinimo);
+            break;
+        case 4:
+            console.log('Fim programa!');
             break;
         default:
             console.log('Opcao invalida');
